@@ -1,19 +1,7 @@
 import react from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { useFonts } from "expo-font";
-
-
 
 export default function SomaTitle() {
-
-  const [loaded] = useFonts({
-
-    WorkSans: require('../assets/fonts/WorkSans-Regular.ttf'),
-  });
-
-  if(!loaded){
-    return null
-  }
 
   return (
     <View style={styles.container}>
@@ -39,7 +27,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 26,
     color: "#656565",
-    marginBottom: 10,
+    marginBottom: 20,
     fontFamily: 'WorkSans',
   },
 });

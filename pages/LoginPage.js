@@ -15,7 +15,6 @@ export default function LoginPage() {
           <Pressable style={styles.createAccount}>
             <Text style={styles.createAccountText}>Crie sua Conta</Text>
           </Pressable>
-
           <Pressable style={styles.signIn}>
             <Text style={styles.signInText}>Entrar</Text>
           </Pressable>
@@ -68,6 +67,7 @@ const styles = StyleSheet.create({
     marginLeft: 2,
     marginRight: 2,
     marginTop: 30,
+    marginBottom: 20,
   },
 
   createAccount: {
@@ -96,8 +96,7 @@ const styles = StyleSheet.create({
   },
 
   signInText: {
-      color: "#232323",
-      fontFamily: "WorkSans",
-    },
-  
+    color: "#232323",
+    fontFamily: "WorkSans",
+  },
 });
