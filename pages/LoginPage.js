@@ -1,21 +1,22 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, Button, Pressable } from "react-native";
 
-export default function LoginPage() {
+export default function LoginPage({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Image style={styles.logo} source={require("../assets/img/SOMA.png")} />
+        <Pressable onPress={() => navigation.goBack('Welcome')}></Pressable>
       </View>
 
       <View style={styles.bottom}>
         <Text style={styles.title}>Investir nunca foi tão simples.</Text>
         <Text style={styles.subtitle}>Venha somar com a gente.</Text>
         <View style={styles.buttons}>
-          <Pressable style={styles.createAccount}>
+          <Pressable onPress={()=> navigation.navigate('SignIn')} style={styles.createAccount}>
             <Text style={styles.createAccountText}>Crie sua Conta</Text>
           </Pressable>
-          <Pressable style={styles.signIn}>
+          <Pressable onPress={()=> navigation.navigate('Code')} style={styles.signIn}>
             <Text style={styles.signInText}>Entrar</Text>
           </Pressable>
         </View>
@@ -28,13 +29,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#232323",
-    marginTop: 80,
+ 
     flexDirection: "column",
   },
 
   header: {
     flex: 1,
     alignItems: "center",
+    marginTop: 40,
   },
   logo: {
     width: 90,

@@ -9,7 +9,7 @@ import {
   Keyboard,
 } from "react-native";
 
-export default function SecurityCode() {
+export default function SecurityCode({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -58,7 +58,7 @@ export default function SecurityCode() {
         </Pressable>
       </View>
       <View style={styles.footer}>
-        <Pressable style={styles.backButton}>
+        <Pressable onPress={()=> navigation.navigate('Login')} style={styles.backButton}>
           <Text style={styles.backButtonTitle}>Voltar</Text>
         </Pressable>
       </View>
@@ -70,12 +70,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#232323",
-    marginTop: 80,
+  
     flexDirection: "column",
     justifyContent: "space-between",
   },
   header: {
     alignSelf: "center",
+    marginTop: 30,
   },
   headerTitle: {
     color: "white",
