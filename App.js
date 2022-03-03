@@ -24,13 +24,13 @@ export default function App() {
 
     <NavigationContainer >
      
-      <Stack.Navigator>
-        <Stack.Screen name="Welcome" component={SomaTitle} />
+      <Stack.Navigator screenOptions={{headerShown:false}}>
+        <Stack.Screen name="Welcome"  component={SomaTitle} />
         <Stack.Screen name="Login" component={LoginPage} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="Code" component={SecurityCode} />
       </Stack.Navigator>
-      <StatusBar style="dark" />
+      <StatusBar  style="dark" />
       
     </NavigationContainer>
   
